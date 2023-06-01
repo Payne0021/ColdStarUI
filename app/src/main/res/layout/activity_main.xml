@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_editor_absoluteX="1dp"
+        app:layout_editor_absoluteY="1dp"
+        android:background="@color/colorPrimaryDark"
+        android:fillViewport="true"
+        tools:context="ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+
+            android:id="@+id/slider_pager"
+            android:layout_width="match_parent"
+            android:layout_height="275dp">
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:backgroundTint="@android:color/transparent"
+            app:tabBackground="@drawable/indicator_selector"
+            android:layout_below="@id/slider_pager"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Best popular films and series"
+            android:textAllCaps="true"
+            android:textColor="@color/light_blue"
+            android:layout_below="@id/indicator"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RVMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView"/>
+
+        <TextView
+            android:id="@+id/txt_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Best popular movies this week"
+            android:textAllCaps="true"
+            android:textColor="@color/light_blue"
+            android:layout_below="@id/RVMovies"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_movies_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/txt_week"/>
+
+        <TextView
+            android:id="@+id/anime_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="anime"
+            android:textAllCaps="true"
+            android:textColor="@color/light_blue"
+            android:layout_below="@id/rv_movies_week"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_anime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/anime_text"
+            android:layout_marginBottom="60dp"/>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="364dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+
+        android:hapticFeedbackEnabled="false">
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/home"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_home_24"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/news"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_newspaper_24"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/search"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_search_24"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/downloads"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_arrow_downward_24"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/person"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_person_24"
+            />
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

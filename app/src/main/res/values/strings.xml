@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Cold Star</string>
+
+    <string name="simple_text">Android has taken the world by storm.
+Everybody wants a smartphone or tablet, and Android devices are hugely popular. In
+this book, we’ll teach you how to develop your own apps, and we’ll start by getting
+you to build a basic app and run it on an Android Virtual Device. Along the way, you’ll
+meet some of the basic components of all Android apps, such as activities and
+layouts. All you need is a little Java know-how...</string>
+</resources>
